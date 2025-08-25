@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+/* Respect iOS safe areas */
+.safe-bottom {
+    padding-bottom: max(env(safe-area-inset-bottom), 12px);
+}
+
+.safe-top {
+    padding-top: max(env(safe-area-inset-top), 12px);
+}
+
+/* Reduce tap highlight and enable smooth scrolling on mobile */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hide scrollbars for virtual list */
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* Custom scrollbar for webkit browsers */
+.scrollbar-custom::-webkit-scrollbar {
+    width: 6px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
