@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FixedSizeList as List } from "react-window";
 import { fetchWordData } from "./lib/gemini";
 import { loadWords, saveWord, deleteWordById, SavedWord } from "./lib/storage";
-import { isMobile, isTablet, isDesktop } from "react-device-detect";
+import { isMobile } from "react-device-detect";
 
 type SearchData = {
   vietnamese_meaning: string;
