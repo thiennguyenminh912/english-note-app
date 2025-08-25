@@ -9,7 +9,7 @@ const __dirname = path.dirname(fileURLToPath(new URL(import.meta.url)));
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/",
+  base: "/english-note-app/",
   plugins: [
     react(),
     viteStaticCopy({

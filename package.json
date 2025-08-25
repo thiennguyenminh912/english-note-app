@@ -2,11 +2,14 @@
   "name": "english-note-app",
   "private": true,
   "version": "0.0.1",
+  "homepage": "https://thiennguyenminh912.github.io/english-note-app",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "start": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "postbuild": "cp dist/index.html dist/404.html"
   },
   "dependencies": {
     "react": "^18.3.1",
